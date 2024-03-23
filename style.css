@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Work Sans";
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-lightpink:hsl(275, 100%, 97%);
+    --clr-grayishpurple: hsl(292, 16%, 49%);
+    --clr-darkpurple: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+p{
+    font-size: 1rem;
+}
+body{
+    background-color: var(--clr-lightpink);
+}
+
+.container{
+    width:100%;
+    height: 100vh;
+    background-color: var(--clr-lightpink);
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    width: 600px;
+    min-height: 500px;
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.heading{
+    display: flex;
+    margin: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+}
+.heading img{
+ margin-right: 1rem;
+}
+
+.accordion{
+padding: 0 2rem;
+margin: 1rem 0;
+}
+
+.accordion-item {
+border-bottom: 1px solid var(--clr-lightpink);
+display: flex;
+flex-direction: column;
+margin-bottom: 0.5rem;
+}
+
+.accordion-title {
+padding: 10px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+}
+h4:hover{
+    color: #AD28EB;
+}
+
+.accordion-content {
+display: none;
+padding: 10px;
+color: var(--clr-grayishpurple);
+}
+
+
+.minus{
+    display: none;
+}
+.accordion >:last-child{
+    border: none;
+}
+
+@media screen and (max-width:1440px){
+    .card{
+        width: 550px;
+        min-height: 400px;
+    }
+}
+
+
